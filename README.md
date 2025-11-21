@@ -24,6 +24,7 @@ gcc main.c -o programa -lpthread
 ## Resultados de ejecución
 
 ### Salida de consola
+```bash
 ===== PROCESAMIENTO PARALELO =====
 Hilo 0 procesó archivo1.txt -> 30 líneas en 0.0000 s
 Hilo 1 procesó archivo2.txt -> 30 líneas en 0.0000 s
@@ -48,7 +49,7 @@ Paralelo:    0.0046 s
 Secuencial:  0.0005 s
 Speedup:     0.1025 x
 ==================================
-
+```
 ### Imagen de resultados
 ![Resultado de la ejecución](resultados/ejecucion.png)
 
