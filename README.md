@@ -52,7 +52,7 @@ Speedup:     0.1025 x
 ==================================
 ```
 ### Imagen de resultados
-![Resultado de la ejecución](resultados/ejecucion.png)
+![Resultado de la ejecución](resultados/ejecucion.PNG)
 
 ## Observaciones
 - Los archivos `archivo1.txt` a `archivo4.txt` contienen transacciones simuladas (líneas de texto).  
