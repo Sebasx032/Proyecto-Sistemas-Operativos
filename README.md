@@ -1,27 +1,19 @@
 # Proyecto Sistemas Operativos
 
 ## Problema
-Desarrollar un programa en C que procese en paralelo
-un conjunto de transacciones simuladas utilizando hilos 
-(`pthread`), midiendo los tiempos de ejecución por 
-transacción y total, comparando con un procesamiento 
-secuencial, y aplicando mecanismos de sincronización 
-para evitar condiciones de carrera.
+Desarrollar un programa en C que procese en paralelo un conjunto de transacciones simuladas utilizando hilos (`pthread`), midiendo los tiempos de ejecución por transacción y total, comparando con un procesamiento secuencial, y aplicando mecanismos de sincronización para evitar condiciones de carrera.
 
-El objetivo es simular un conjunto de transacciones 
-reales (como procesamiento de archivos o cálculos 
-independientes) y analizar el rendimiento del 
-paralelismo.
+El objetivo es simular un conjunto de transacciones reales (como procesamiento de archivos o cálculos independientes) y analizar el rendimiento del paralelismo.
 
 ## Procedimiento de ejecución
 # Abrir terminal en Ubuntu
 cd src
 
 # Compilar el programa
-gcc -pthread main.c -o main
+gcc main.c -o programa -lpthread
 
 # Ejecutar el programa
-./main
+./programa
 
 # El programa mostrará en la consola:
 # - Líneas procesadas por cada hilo.
@@ -57,21 +49,14 @@ Secuencial:  0.0005 s
 Speedup:     0.1025 x
 ==================================
 
-
 ### Imagen de resultados
 ![Resultado de la ejecución](resultados/ejecucion.png)
 
 ## Observaciones
-- Los archivos `archivo1.txt` a `archivo4.txt` contienen
--  transacciones simuladas (líneas de texto).  
-- Cada hilo procesa un archivo y cuenta las transacciones,
--  simulando procesamiento concurrente.  
-- Se utilizó un mutex para sincronizar el acceso a las
-- variables compartidas (`lineas_totales_paralelo` y `
-- tiempo_total_hilos`).  
-- Se observó un **speedup menor a 1**, lo cual es razonable
--  debido a que el procesamiento por línea es muy rápido y
--  el overhead de creación de hilos domina.  
+- Los archivos `archivo1.txt` a `archivo4.txt` contienen transacciones simuladas (líneas de texto).  
+- Cada hilo procesa un archivo y cuenta las transacciones, simulando procesamiento concurrente.  
+- Se utilizó un mutex para sincronizar el acceso a las variables compartidas (`lineas_totales_paralelo` y `tiempo_total_hilos`).  
+- Se observó un **speedup menor a 1**, lo cual es razonable debido a que el procesamiento por línea es muy rápido y el overhead de creación de hilos domina.  
 
 ## Conclusión
 El programa cumple con los objetivos del proyecto:
