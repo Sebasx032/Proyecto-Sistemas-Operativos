@@ -6,6 +6,7 @@ Desarrollar un programa en C que procese en paralelo un conjunto de transaccione
 El objetivo es simular un conjunto de transacciones reales (como procesamiento de archivos o cálculos independientes) y analizar el rendimiento del paralelismo.
 
 ## Procedimiento de ejecución
+```bash
 # Abrir terminal en Ubuntu
 cd src
 
@@ -20,7 +21,7 @@ gcc main.c -o programa -lpthread
 # - Tiempo total de ejecución paralelo.
 # - Tiempo de ejecución secuencial.
 # - Speedup obtenido.
-
+```
 ## Resultados de ejecución
 
 ### Salida de consola
